@@ -54,7 +54,7 @@ let observacao = document.querySelector('#textarea');
 document.querySelectorAll('input[class=subject]:checked').forEach((element) => {
   materia.push(element.value);
 });
-let materiaString = ''
+let materiaString = '';
 function attInfo() {
   nome = document.querySelector('#input-name');
   sobrenome = document.querySelector('#input-lastname');
@@ -69,7 +69,6 @@ function attInfo() {
 }
 
 function catchMateria() {
-
   materia.forEach((element) => {
     if (materiaString === '') {
       materiaString = `${element}`;
@@ -79,18 +78,17 @@ function catchMateria() {
   });
 }
 
-
 function criaObjeto(event) {
   event.preventDefault();
   attInfo();
   catchMateria();
   const paragrafo = document.getElementById('infos');
-  paragrafo.innerHTML = `Nome: ${nome.value} ${sobrenome.value};
-  Email: ${email.value};
-  Casa: ${casa.value};
-  Família: ${familia.value};
-  Avaliação: ${nota.value};
-  Observações: ${observacao.value};
+  paragrafo.innerHTML = `Nome: ${nome.value} ${sobrenome.value};<br>
+  Email: ${email.value};<br>
+  Casa: ${casa.value};<br>
+  Família: ${familia.value};<br>
+  Avaliação: ${nota.value};<br>
+  Observações: ${observacao.value};<br>
   Matérias: ${materiaString}.`;
 }
 button.addEventListener('click', criaObjeto);
