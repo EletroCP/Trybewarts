@@ -77,13 +77,27 @@ function catchMateria() {
     }
   });
 }
-
+const forms = document.getElementById('evaluation-form');
+function carta() {
+  attInfo();
+  const logo = document.getElementById('trybewarts-forms-logo');
+  logo.style.marginTop = '15%';
+  if (casa.value === 'Gitnória') {
+    forms.style.backgroundImage = 'url(images/cartaGitnoria.png)';
+  } else if (casa.value === 'Pytherina') {
+    forms.style.backgroundImage = 'url(images/cartaPyterina.png)';
+  } else if (casa.value === 'Reactpuff') {
+    forms.style.backgroundImage = 'url(images/cartaReactpuff.png)';
+  } else if (casa.value === 'Corvinode') {
+    forms.style.backgroundImage = 'url(images/cartaCorvinode.png)';
+  }
+}
 function criaObjeto(event) {
   event.preventDefault();
   attInfo();
   catchMateria();
-  const paragrafo = document.getElementById('infos');
-  paragrafo.innerHTML = `Nome: ${nome.value} ${sobrenome.value};<br>
+  carta();
+  forms.innerHTML = `Nome: ${nome.value} ${sobrenome.value};<br>
   Email: ${email.value};<br>
   Casa: ${casa.value};<br>
   Família: ${familia.value};<br>

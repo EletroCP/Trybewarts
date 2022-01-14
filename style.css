@@ -1,8 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url('images/background2.png');
+}
+
 .header {
+  height: 75px;
   display: flex;
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
   align-items: center;
+}
+
+#logo {
+  height: 80%;
 }
 
 .trybewarts-login {
@@ -19,6 +33,8 @@ main {
   display: flex;
   width: 675px;
   flex-direction: column;
+  background-size: cover;
+  height: 850px;
 }
 
 #trybewarts-forms-logo {
