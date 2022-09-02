@@ -1,18 +1,31 @@
 * {
   padding: 0;
   margin: 0;
+
 }
 
 body {
   background-image: url('images/background2.png');
 }
 
+#input-senha , #email , #input-name , #input-lastname , #input-email {
+  padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  margin: 2px;
+  box-shadow: 1px 1px 7px black;
+}
+
+
 .header {
   height: 75px;
   display: flex;
-  background-color: rgb(50, 167, 145);
+  background-color: rgb(191, 199, 86);
   justify-content: space-between;
   align-items: center;
+  box-shadow: rgb(37, 37, 37) 10px 5px 5px;
 }
 
 #logo {
@@ -22,11 +35,13 @@ body {
 .trybewarts-login {
   display: flex;
   align-items: center;
+  color: black;
 }
 
 main {
   display: flex;
   justify-content: space-between;
+  padding-top: 3px;
 }
 
 #evaluation-form {
@@ -44,3 +59,14 @@ main {
 #nota {
   display: flex;
 }
+
+#house {
+  margin-top: 2px;
+  padding: 5px;
+  padding-right: 15%;
+  border-radius: 11px;
+  text-align: start;
+  align-items: flex-start;
+  box-shadow: 1px 1px 7px black;
+}
+
